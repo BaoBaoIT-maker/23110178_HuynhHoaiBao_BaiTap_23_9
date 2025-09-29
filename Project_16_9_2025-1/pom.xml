@@ -11,6 +11,7 @@
 	<groupId>vn.iot.star</groupId>
 	<artifactId>Project_17_9_2025</artifactId>
 	<version>1.1.0</version>
+<packaging>jar</packaging>
 	<name>Project_16_9_2025-1</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
@@ -77,7 +78,23 @@
 		<version>2.11.0</version>
 		</dependency>
 		
+<!-- JSTL -->
+<dependency>
+    <groupId>jakarta.servlet.jsp.jstl</groupId>
+    <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
+</dependency>
+<dependency>
+    <groupId>org.glassfish.web</groupId>
+    <artifactId>jakarta.servlet.jsp.jstl</artifactId>
+</dependency>
 
+<!-- Servlet & JSP engine -->
+<dependency>
+    <groupId>org.apache.tomcat.embed</groupId>
+    <artifactId>tomcat-embed-jasper</artifactId>
+</dependency>
+
+	
 		<dependency>
     <groupId>org.springdoc</groupId>
     <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
