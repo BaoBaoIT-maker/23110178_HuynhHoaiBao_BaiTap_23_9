@@ -80,7 +80,7 @@ public class VideoController {
         // --- 2. KHẮC PHỤC LỖI CATEGORY BINDING (QUAN TRỌNG) ---
         if (video.getCategory() != null && video.getCategory().getId() != null) {
             // Lấy ID đã được bind từ form
-            Long categoryId = video.getCategory().getId();
+        	Integer categoryId = video.getCategory().getId();
             
             // Dùng CategoryService để lấy đối tượng Category HOÀN CHỈNH từ DB
             // (findById của bạn nhận int, cần ép kiểu hoặc sửa findById nhận Long)
@@ -110,7 +110,7 @@ public class VideoController {
         
         // ✅ THÊM LOGIC NÀY TẠI ĐÂY (Tương tự như /save)
         if (video.getCategory() != null && video.getCategory().getId() != null) {
-            Long categoryId = video.getCategory().getId();
+        	Integer categoryId = video.getCategory().getId();
             // Lấy đối tượng Category đầy đủ từ DB
             Category managedCategory = categoryService.findById(categoryId.intValue()); 
             video.setCategory(managedCategory);
